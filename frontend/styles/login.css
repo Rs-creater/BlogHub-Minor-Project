@@ -1,0 +1,112 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f3f4f7, #d9e2f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Fields */
+.textbox {
+    margin: 20px 0;
+    position: relative;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.textbox input:focus {
+    border-color: #007bff;
+}
+
+/* Remember Me Section */
+.remember-me {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.login-box {
+    animation: fadeIn 0.6s ease-out;
+}

@@ -1,0 +1,122 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Registration Container */
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.registration-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    width: 380px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.7s ease-out;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Fields */
+.textbox {
+    margin: 20px 0;
+    position: relative;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.textbox input:focus {
+    border-color: #2575fc;
+}
+
+/* Terms and Conditions */
+.terms {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.terms input {
+    margin-right: 5px;
+}
+
+.terms a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #2575fc;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #6a11cb;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.registration-box {
+    animation: fadeIn 0.7s ease-out;
+}
