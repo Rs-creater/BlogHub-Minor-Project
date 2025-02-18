@@ -4,87 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BlogHub - Your Blogging Platform</title>
+    <title>Blog Hub - Home Page</title>
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
-
-    <!-- Navigation -->
+    <!-- Navbar -->
     <header>
-        <div class="logo">
-            <h1>BlogHub</h1>
+        <div class="navbar">
+            <h1 class="logo">Blog Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#createPost">Create Post</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#contactForm">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#latest">Latest Posts</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Welcome to BlogHub</h2>
-            <p>Your hub for the latest and greatest blogs from all categories.</p>
-            <a href="#latest" class="btn">Explore Posts</a>
-        </div>
-    </section>
+    <main>
+        <!-- Search Section -->
+        <section id="search" class="section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search posts..." />
+                <button onclick="searchPost()">Search</button>
+            </div>
+            <div id="searchResults"></div>
+        </section>
 
-    <!-- Latest Posts Section -->
-    <section id="latest">
-        <h2>Latest Blog Posts</h2>
-        <div class="blog-container">
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x200" alt="Blog Image">
-                <h3>Blog Post Title 1</h3>
-                <p>Short description of the blog post. Lorem ipsum dolor sit amet...</p>
-                <a href="#">Read More</a>
+        <!-- Post Creation Section -->
+        <section id="createPost" class="section">
+            <div class="form-container">
+                <h2>Create New Post</h2>
+                <form id="createPostForm">
+                    <input type="text" id="postTitle" placeholder="Post Title" required />
+                    <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+                    <input type="file" id="postImage" />
+                    <button type="submit">Create Post</button>
+                </form>
             </div>
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x200" alt="Blog Image">
-                <h3>Blog Post Title 2</h3>
-                <p>Short description of the blog post. Lorem ipsum dolor sit amet...</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/350x200" alt="Blog Image">
-                <h3>Blog Post Title 3</h3>
-                <p>Short description of the blog post. Lorem ipsum dolor sit amet...</p>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Categories Section -->
-    <section id="categories">
-        <h2>Explore Categories</h2>
-        <div class="category-container">
-            <div class="category-card">
-                <h3>Technology</h3>
-                <p>Discover the latest trends in technology.</p>
+        <!-- Post Management Section -->
+        <section id="home" class="section">
+            <div class="post-management">
+                <h2>Manage Posts</h2>
+                <div id="postsContainer">
+                    <!-- Dynamically loaded posts will appear here -->
+                </div>
             </div>
-            <div class="category-card">
-                <h3>Health</h3>
-                <p>Get tips and advice on living a healthier life.</p>
-            </div>
-            <div class="category-card">
-                <h3>Lifestyle</h3>
-                <p>Find posts about fashion, travel, and everyday life.</p>
-            </div>
-            <div class="category-card">
-                <h3>Business</h3>
-                <p>Read blogs on entrepreneurship and business tips.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>&copy; 2025 BlogHub. All rights reserved.</p>
-    </footer>
+        <!-- Commenting System -->
+        <section id="comments" class="section">
+            <div id="commentSection">
+                <!-- Comments will appear below each post dynamically -->
+            </div>
+        </section>
 
+        <!-- Contact Form Section -->
+        <section id="contactForm" class="section">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/home.js"></script>
 </body>
 </html>
