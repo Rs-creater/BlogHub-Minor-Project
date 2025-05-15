@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogHub - AI-Powered Content Recommendations</title>
+    <link rel="stylesheet" href="style/features.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="/api/placeholder/180/60" alt="BlogHub Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.jsp">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>AI-Powered Content Recommendations</h1>
+                <p>Engage your readers like never before with personalized content suggestions that keep them coming back.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Try It Now</a>
+                    <a href="#" class="btn-video">
+                        <span class="play-icon">▶</span>
+                        Watch Demo
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/600/400" alt="AI Recommendations Demo">
+                <div class="floating-card card-1">
+                    <div class="card-icon">🔍</div>
+                    <p>Smart Analysis</p>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🎯</div>
+                    <p>Precision Targeting</p>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">📈</div>
+                    <p>27% Engagement Boost</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlights -->
+    <section class="features">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/80/80" alt="Reader Analysis">
+                    </div>
+                    <h3>Reader Analysis</h3>
+                    <p>Our AI analyzes reading patterns and preferences to understand what content resonates with each visitor.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/80/80" alt="Content Matching">
+                    </div>
+                    <h3>Content Matching</h3>
+                    <p>Intelligent algorithms match your existing content with reader interests for perfect recommendations.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/80/80" alt="Smart Placement">
+                    </div>
+                    <h3>Smart Placement</h3>
+                    <p>Recommendations appear at optimal moments in the reader journey to maximize engagement.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/80/80" alt="Performance Analytics">
+                    </div>
+                    <h3>Performance Analytics</h3>
+                    <p>Detailed metrics help you understand what's working and continuously improve your content strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualization Section -->
+    <section class="visualization">
+        <div class="container">
+            <div class="vis-content">
+                <h2>See The Difference</h2>
+                <p>Our AI recommendation engine has helped thousands of bloggers increase page views, reduce bounce rates, and boost reader engagement.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="42">0</h3>
+                        <p>Average increase in time on site</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="67">0</h3>
+                        <p>More pages per session</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="89">0</h3>
+                        <p>Of users report more returning visitors</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vis-chart">
+                <div class="chart-container">
+                    <canvas id="engagementChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="quote">"Since implementing BlogHub's AI recommendations, our reader engagement has increased by 34% and our subscription rate has doubled!"</div>
+                        <div class="author">
+                            <img src="/api/placeholder/60/60" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Travel Blogger, Wanderlust Weekly</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote">"The personalized content recommendations have transformed how readers interact with our tech blog. Our bounce rate dropped from 65% to just 23%."</div>
+                        <div class="author">
+                            <img src="/api/placeholder/60/60" alt="Michael Chen">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Editor, TechInsider</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote">"I was skeptical about AI recommendations, but the results speak for themselves. My food blog now has 3x the ad revenue thanks to longer session times!"</div>
+                        <div class="author">
+                            <img src="/api/placeholder/60/60" alt="Elena Rodriguez">
+                            <div class="author-info">
+                                <h4>Elena Rodriguez</h4>
+                                <p>Culinary Creator, Flavor Journal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-btn">&lt;</button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="interactive-demo">
+        <div class="container">
+            <h2>Try It Yourself</h2>
+            <p>See how our AI recommendation engine would work on your blog</p>
+            <div class="demo-container">
+                <div class="blog-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-nav"></div>
+                        <div class="mockup-title">Sample Blog Article</div>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-text">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line short"></span>
+                            <span class="line"></span>
+                            <span class="line short"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="mockup-image"></div>
+                        <div class="mockup-text">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line short"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="recommendation-area">
+                        <h4>Recommended For You</h4>
+                        <div class="recommendation-items">
+                            <div class="rec-item active" data-topic="travel">
+                                <div class="rec-thumb"></div>
+                                <div class="rec-title">10 Hidden Gems in Portugal</div>
+                            </div>
+                            <div class="rec-item" data-topic="tech">
+                                <div class="rec-thumb"></div>
+                                <div class="rec-title">Future of AI in Content Creation</div>
+                            </div>
+                            <div class="rec-item" data-topic="food">
+                                <div class="rec-thumb"></div>
+                                <div class="rec-title">Mediterranean Diet Essentials</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-controls">
+                    <h4>Select Your Blog Type:</h4>
+                    <div class="blog-type-selector">
+                        <button class="type-btn active" data-type="travel">Travel</button>
+                        <button class="type-btn" data-type="tech">Technology</button>
+                        <button class="type-btn" data-type="food">Food</button>
+                    </div>
+                    <div class="demo-metrics">
+                        <div class="metric">
+                            <label>Expected Engagement:</label>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 72%"></div>
+                            </div>
+                            <span>72%</span>
+                        </div>
+                        <div class="metric">
+                            <label>Reader Retention:</label>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 83%"></div>
+                            </div>
+                            <span>83%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Ready to Boost Your Reader Engagement?</h2>
+            <p class="section-subtitle">Choose the plan that fits your blog's needs</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="amount">$19</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for new blogs</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Basic AI recommendations</li>
+                            <li>Up to 10,000 monthly visitors</li>
+                            <li>Simple analytics dashboard</li>
+                            <li>Email support</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#" class="btn-outline">Start 14-Day Trial</a>
+                    </div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-tag">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Growth</h3>
+                        <div class="price">
+                            <span class="amount">$49</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For established blogs</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Advanced AI recommendations</li>
+                            <li>Up to 100,000 monthly visitors</li>
+                            <li>Detailed performance analytics</li>
+                            <li>A/B testing capabilities</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#" class="btn-primary">Start 14-Day Trial</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="amount">$99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For professional publishers</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Premium AI recommendation engine</li>
+                            <li>Unlimited monthly visitors</li>
+                            <li>Advanced analytics with custom reports</li>
+                            <li>Content strategy insights</li>
+                            <li>Dedicated account manager</li>
+                            <li>API access</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#" class="btn-outline">Start 14-Day Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">How does the AI recommendation system work?</div>
+                    <div class="faq-answer">Our AI analyzes reader behavior, content topics, and engagement patterns to suggest the most relevant content to each visitor, increasing the chances they'll continue reading on your site.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do I need technical knowledge to implement this?</div>
+                    <div class="faq-answer">Not at all! Our system integrates seamlessly with most blogging platforms through a simple plugin or script. Our team handles all the technical setup for you.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How long until I see results?</div>
+                    <div class="faq-answer">Most users see significant improvements in engagement metrics within the first 2-3 weeks as the AI learns your audience's preferences and optimizes recommendations.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I customize how recommendations appear?</div>
+                    <div class="faq-answer">Yes! You can fully customize the appearance of recommendation widgets to match your blog's design, including placement, styling, and the number of recommendations shown.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will this slow down my website?</div>
+                    <div class="faq-answer">Our recommendation system is optimized for performance with minimal impact on page load times. The recommendations load asynchronously after your main content.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What if I want to cancel my subscription?</div>
+                    <div class="faq-answer">You can cancel anytime. We don't lock you into long-term contracts, and we offer a 30-day money-back guarantee if you're not satisfied with our service.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Transform Your Blog's Reader Experience Today</h2>
+                <p>Join thousands of successful bloggers who've boosted engagement with AI-powered content recommendations.</p>
+                <a href="#" class="btn-primary">Get Started Free</a>
+                <p class="cta-small">No credit card required for 14-day trial</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="/api/placeholder/160/50" alt="BlogHub Logo">
+                    <p>Empowering bloggers with intelligent tools to grow their audience and engagement.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest news and tips on content engagement.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 BlogHub. All rights reserved.</div>
+                <div class="legal-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/features.js"></script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogHub - Settings</title>
+    <link rel="stylesheet" href="style/setting.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-feather-alt"></i> BlogHub
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="home.jsp">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li class="active"><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-avatar"></div>
+                <span class="username">Manoj Patidar</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="settings-container">
+                <div class="settings-sidebar">
+                    <h2>Settings</h2>
+                    <ul class="settings-nav">
+                        <li class="active" data-tab="profile-settings"><i class="fas fa-user"></i> Profile</li>
+                        <li data-tab="account-settings"><i class="fas fa-cog"></i> Account</li>
+                        <li data-tab="interests-settings"><i class="fas fa-tags"></i> Interests</li>
+                        <li data-tab="notification-settings"><i class="fas fa-bell"></i> Notifications</li>
+                        <li data-tab="security-settings"><i class="fas fa-shield-alt"></i> Security</li>
+                    </ul>
+                </div>
+
+                <div class="settings-content">
+                    <!-- Profile Settings -->
+                    <div id="profile-settings" class="settings-tab active">
+                        <h2>Profile Settings</h2>
+                        <form id="profile-form" action="setting.jsp?action=profile" method="post">
+                            <div class="form-group">
+                                <label for="settings-full-name">Full Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-user input-icon"></i>
+                                    <input type="text" id="settings-full-name" name="name" value="Manoj Patidar">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="settings-username">Username</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-at input-icon"></i>
+                                    <input type="text" id="settings-username" name="username" value="manoj123">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="settings-bio">Bio</label>
+                                <div class="input-wrapper textarea-wrapper">
+                                    <i class="fa-solid fa-comment input-icon"></i>
+                                    <textarea id="settings-bio" name="bio" rows="3">Writer and technology enthusiast. I write about tech trends and lifestyle topics.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Profile Picture</label>
+                                <div class="avatar-upload">
+                                    <div class="current-avatar"></div>
+                                    <div class="upload-actions">
+                                        <button type="button" class="upload-btn">
+                                            <i class="fas fa-upload"></i> Upload new image
+                                        </button>
+                                        <input type="file" id="avatar-input" accept="image/*" hidden>
+                                        <button type="button" class="remove-btn">
+                                            <i class="fas fa-trash"></i> Remove
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group user-type-group">
+                                <label>Account Type</label>
+                                <div class="user-type-selector">
+                                    <div class="user-type-option creator active" data-type="creator">
+                                        <div class="option-icon">
+                                            <i class="fas fa-pen-fancy"></i>
+                                        </div>
+                                        <div class="option-text">
+                                            <h3>Creator</h3>
+                                            <p>Write and publish content</p>
+                                        </div>
+                                    </div>
+                                    <div class="user-type-option viewer" data-type="viewer">
+                                        <div class="option-icon">
+                                            <i class="fas fa-book-reader"></i>
+                                        </div>
+                                        <div class="option-text">
+                                            <h3>Reader</h3>
+                                            <p>Explore and read content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="user-type-input" name="user-type" value="creator">
+                            </div>
+
+                            <button type="submit" class="save-btn">
+                                <span>Save Changes</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Account Settings -->
+                    <div id="account-settings" class="settings-tab">
+                        <h2>Account Settings</h2>
+                        <form id="account-form" action="setting.jsp?action=account" method="post">
+                            <div class="form-group">
+                                <label for="settings-email">Email Address</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-envelope input-icon"></i>
+                                    <input type="email" id="settings-email" name="email" value="john.doe@example.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Account Preferences</label>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="public-profile" name="public-profile" checked>
+                                    <label for="public-profile">Make my profile public</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="allow-mentions" name="allow-mentions" checked>
+                                    <label for="allow-mentions">Allow others to mention me in comments</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="content-visibility" name="content-visibility" checked>
+                                    <label for="content-visibility">Show my content in discovery feeds</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="language-preference">Language Preference</label>
+                                <div class="input-wrapper select-wrapper">
+                                    <i class="fa-solid fa-globe input-icon"></i>
+                                    <select id="language-preference" name="language-preference">
+                                        <option value="en">English</option>
+                                        <option value="es">Spanish</option>
+                                        <option value="fr">French</option>
+                                        <option value="de">German</option>
+                                        <option value="ja">Japanese</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down select-arrow"></i>
+                                </div>
+                            </div>
+
+                            <div class="danger-zone">
+                                <h3>Danger Zone</h3>
+                                <button type="button" class="deactivate-btn">
+                                    <i class="fas fa-user-slash"></i> Deactivate Account
+                                </button>
+                                <button type="button" class="delete-btn">
+                                    <i class="fas fa-trash"></i> Delete Account
+                                </button>
+                            </div>
+
+                            <button type="submit" class="save-btn">
+                                <span>Save Changes</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Interests Settings -->
+                    <div id="interests-settings" class="settings-tab">
+                        <h2>Interests Settings</h2>
+                        <form id="interests-form" action="setting.jsp?action=interests" method="post">
+                            <div class="form-group creator-field">
+                                <label>Writing Interests</label>
+                                <p class="interests-subtitle">Topics you're interested in writing about</p>
+                                <div class="interests-container">
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="tech" name="interests" value="technology" checked>
+                                        <label for="tech"><i class="fas fa-microchip"></i> Technology</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="lifestyle" name="interests" value="lifestyle" checked>
+                                        <label for="lifestyle"><i class="fas fa-spa"></i> Lifestyle</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="health" name="interests" value="health">
+                                        <label for="health"><i class="fas fa-heartbeat"></i> Health</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="travel" name="interests" value="travel">
+                                        <label for="travel"><i class="fas fa-plane"></i> Travel</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="food" name="interests" value="food">
+                                        <label for="food"><i class="fas fa-utensils"></i> Food</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="business" name="interests" value="business">
+                                        <label for="business"><i class="fas fa-chart-line"></i> Business</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="art" name="interests" value="art">
+                                        <label for="art"><i class="fas fa-palette"></i> Art</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="science" name="interests" value="science">
+                                        <label for="science"><i class="fas fa-flask"></i> Science</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="fiction" name="interests" value="fiction">
+                                        <label for="fiction"><i class="fas fa-book"></i> Fiction</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="poetry" name="interests" value="poetry">
+                                        <label for="poetry"><i class="fas fa-feather"></i> Poetry</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group viewer-field">
+                                <label>Reading Interests</label>
+                                <p class="interests-subtitle">Topics you're interested in reading about</p>
+                                <div class="interests-container">
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="tech-read" name="reading-interests" value="technology" checked>
+                                        <label for="tech-read"><i class="fas fa-microchip"></i> Technology</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="lifestyle-read" name="reading-interests" value="lifestyle" checked>
+                                        <label for="lifestyle-read"><i class="fas fa-spa"></i> Lifestyle</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="health-read" name="reading-interests" value="health" checked>
+                                        <label for="health-read"><i class="fas fa-heartbeat"></i> Health</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="travel-read" name="reading-interests" value="travel">
+                                        <label for="travel-read"><i class="fas fa-plane"></i> Travel</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="food-read" name="reading-interests" value="food">
+                                        <label for="food-read"><i class="fas fa-utensils"></i> Food</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="business-read" name="reading-interests" value="business">
+                                        <label for="business-read"><i class="fas fa-chart-line"></i> Business</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="art-read" name="reading-interests" value="art">
+                                        <label for="art-read"><i class="fas fa-palette"></i> Art</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="science-read" name="reading-interests" value="science">
+                                        <label for="science-read"><i class="fas fa-flask"></i> Science</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="fiction-read" name="reading-interests" value="fiction">
+                                        <label for="fiction-read"><i class="fas fa-book"></i> Fiction</label>
+                                    </div>
+                                    <div class="interest-chip">
+                                        <input type="checkbox" id="poetry-read" name="reading-interests" value="poetry">
+                                        <label for="poetry-read"><i class="fas fa-feather"></i> Poetry</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="save-btn">
+                                <span>Save Changes</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Notification Settings -->
+                    <div id="notification-settings" class="settings-tab">
+                        <h2>Notification Settings</h2>
+                        <form id="notification-form" action="setting.jsp?action=notifications" method="post">
+                            <div class="form-group">
+                                <label for="notification-preference">Email Digest Frequency</label>
+                                <div class="input-wrapper select-wrapper">
+                                    <i class="fa-solid fa-bell input-icon"></i>
+                                    <select id="notification-preference" name="notification-preference">
+                                        <option value="daily">Daily digest</option>
+                                        <option value="weekly" selected>Weekly digest</option>
+                                        <option value="important">Important updates only</option>
+                                        <option value="none">No notifications</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down select-arrow"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email Notifications</label>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="new-followers" name="new-followers" checked>
+                                    <label for="new-followers">New followers</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="post-comments" name="post-comments" checked>
+                                    <label for="post-comments">Comments on my posts</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="post-likes" name="post-likes">
+                                    <label for="post-likes">Likes on my posts</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="content-mentions" name="content-mentions" checked>
+                                    <label for="content-mentions">Mentions in comments or posts</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="blog-recommendations" name="blog-recommendations" checked>
+                                    <label for="blog-recommendations">Content recommendations</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="marketing-emails" name="marketing-emails">
+                                    <label for="marketing-emails">News and updates from BlogHub</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Push Notifications</label>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="push-comments" name="push-comments" checked>
+                                    <label for="push-comments">Comments on my posts</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="push-likes" name="push-likes">
+                                    <label for="push-likes">Likes on my posts</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="push-followers" name="push-followers" checked>
+                                    <label for="push-followers">New followers</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="save-btn">
+                                <span>Save Changes</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Security Settings -->
+                    <div id="security-settings" class="settings-tab">
+                        <h2>Security Settings</h2>
+                        <form id="security-form" action="setting.jsp?action=security" method="post">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-lock input-icon"></i>
+                                    <input type="password" id="current-password" name="current-password" placeholder="Enter your current password">
+                                    <i class="fas fa-eye-slash toggle-password" data-for="current-password"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-lock input-icon"></i>
+                                    <input type="password" id="new-password" name="new-password" placeholder="Create a new password">
+                                    <i class="fas fa-eye-slash toggle-password" data-for="new-password"></i>
+                                </div>
+                                <div class="password-strength" id="password-strength">
+                                    <div class="strength-meter">
+                                        <div class="strength-indicator" id="strength-indicator"></div>
+                                    </div>
+                                    <p id="strength-text">Password strength</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-new-password">Confirm New Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-shield-alt input-icon"></i>
+                                    <input type="password" id="confirm-new-password" name="confirm-new-password" placeholder="Re-enter your new password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Two-Factor Authentication</label>
+                                <div class="tfa-status">
+                                    <div class="status-indicator disabled"></div>
+                                    <div class="status-text">
+                                        <p class="status-title">Two-Factor Authentication is disabled</p>
+                                        <p class="status-desc">Enable two-factor authentication for enhanced account security</p>
+                                    </div>
+                                    <button type="button" class="tfa-toggle-btn">Enable</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Connected Social Accounts</label>
+                                <div class="social-connections">
+                                    <div class="social-connection">
+                                        <div class="connection-icon google-icon">
+                                            <i class="fab fa-google"></i>
+                                        </div>
+                                        <div class="connection-details">
+                                            <p class="connection-name">Google</p>
+                                            <p class="connection-email">john.doe@gmail.com</p>
+                                        </div>
+                                        <button type="button" class="disconnect-btn">Disconnect</button>
+                                    </div>
+                                    <div class="social-connection">
+                                        <div class="connection-icon facebook-icon">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="connection-details">
+                                            <p class="connection-name">Facebook</p>
+                                            <p class="connection-status">Not connected</p>
+                                        </div>
+                                        <button type="button" class="connect-btn">Connect</button>
+                                    </div>
+                                    <div class="social-connection">
+                                        <div class="connection-icon twitter-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="connection-details">
+                                            <p class="connection-name">Twitter</p>
+                                            <p class="connection-status">Not connected</p>
+                                        </div>
+                                        <button type="button" class="connect-btn">Connect</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Session Management</label>
+                                <div class="session-list">
+                                    <div class="session-item current">
+                                        <div class="session-icon">
+                                            <i class="fas fa-laptop"></i>
+                                        </div>
+                                        <div class="session-details">
+                                            <p class="device-name">Chrome on Windows</p>
+                                            <p class="session-info">Current session • Active now</p>
+                                        </div>
+                                    </div>
+                                    <div class="session-item">
+                                        <div class="session-icon">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <div class="session-details">
+                                            <p class="device-name">Safari on iPhone</p>
+                                            <p class="session-info">Active 2 days ago</p>
+                                        </div>
+                                        <button type="button" class="logout-btn">Log out</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="logout-all-btn">
+                                    <i class="fas fa-sign-out-alt"></i> Log out of all other devices
+                                </button>
+                            </div>
+
+                            <button type="submit" class="save-btn">
+                                <span>Save Changes</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-feather-alt"></i> BlogHub
+                </div>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Help</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 BlogHub. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="js/setting.js"></script>
+</body>
+</html>

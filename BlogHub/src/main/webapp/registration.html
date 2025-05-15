@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogHub - Register</title>
+    <link rel="stylesheet" href="style/registration.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="side-decoration">
+            <div class="decoration-content">
+                <div class="logo">
+                    <i class="fas fa-feather-alt"></i> BlogHub
+                </div>
+                <h2>Join our creative community of writers & readers</h2>
+                <p>Share ideas, discover new perspectives, and connect with passionate storytellers from around the world.</p>
+                <div class="decoration-image"></div>
+                <div class="testimonial">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"BlogHub transformed how I share my writing with the world. The community feedback is absolutely incredible!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <p class="author-name">Sarah Johnson</p>
+                            <p class="author-title">Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="registration-container">
+                <div class="registration-header">
+                    <div class="header-logo">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h2>Join BlogHub</h2>
+                    <p class="subtitle">Start your creative journey today</p>
+                </div>
+                
+                <div class="user-type-selector">
+                    <div class="user-type-option creator active" data-type="creator">
+                        <div class="option-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <div class="option-text">
+                            <h3>Creator</h3>
+                            <p>Write and publish content</p>
+                        </div>
+                    </div>
+                    <div class="user-type-option viewer" data-type="viewer">
+                        <div class="option-icon">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <div class="option-text">
+                            <h3>Reader</h3>
+                            <p>Explore and read content</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="registration-form" class="registration-form" action="reg.jsp" method="post">
+                    <input type="hidden" id="user-type-input" name="user-type" value="creator">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user input-icon"></i>
+                                <input type="text" id="full-name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-at input-icon"></i>
+                                <input type="text" id="username" name="username" placeholder="Choose a unique username" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-envelope input-icon"></i>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock input-icon"></i>
+                                <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                                <i class="fas fa-eye-slash toggle-password" id="toggle-password"></i>
+                            </div>
+                            <div class="password-strength" id="password-strength">
+                                <div class="strength-meter">
+                                    <div class="strength-indicator" id="strength-indicator"></div>
+                                </div>
+                                <p id="strength-text">Password strength</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-shield-alt input-icon"></i>
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group creator-field">
+                        <label for="bio">Short Bio <span class="optional">(optional)</span></label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <i class="fa-solid fa-comment input-icon"></i>
+                            <textarea id="bio" name="bio" rows="3" placeholder="Tell us about yourself and your writing style"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group creator-field">
+                        <label>Writing Interests</label>
+                        <p class="interests-subtitle">Select topics you're interested in writing about</p>
+                        <div class="interests-container">
+                            <div class="interest-chip">
+                                <input type="checkbox" id="tech" name="interests" value="technology">
+                                <label for="tech"><i class="fas fa-microchip"></i> Technology</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="lifestyle" name="interests" value="lifestyle">
+                                <label for="lifestyle"><i class="fas fa-spa"></i> Lifestyle</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="health" name="interests" value="health">
+                                <label for="health"><i class="fas fa-heartbeat"></i> Health</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="travel" name="interests" value="travel">
+                                <label for="travel"><i class="fas fa-plane"></i> Travel</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="food" name="interests" value="food">
+                                <label for="food"><i class="fas fa-utensils"></i> Food</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="business" name="interests" value="business">
+                                <label for="business"><i class="fas fa-chart-line"></i> Business</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="art" name="interests" value="art">
+                                <label for="art"><i class="fas fa-palette"></i> Art</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="science" name="interests" value="science">
+                                <label for="science"><i class="fas fa-flask"></i> Science</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="fiction" name="interests" value="fiction">
+                                <label for="fiction"><i class="fas fa-book"></i> Fiction</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="poetry" name="interests" value="poetry">
+                                <label for="poetry"><i class="fas fa-feather"></i> Poetry</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group viewer-field" style="display: none;">
+                        <label>Reading Interests</label>
+                        <p class="interests-subtitle">Select topics you're interested in reading about</p>
+                        <div class="interests-container">
+                            <div class="interest-chip">
+                                <input type="checkbox" id="tech-read" name="reading-interests" value="technology">
+                                <label for="tech-read"><i class="fas fa-microchip"></i> Technology</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="lifestyle-read" name="reading-interests" value="lifestyle">
+                                <label for="lifestyle-read"><i class="fas fa-spa"></i> Lifestyle</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="health-read" name="reading-interests" value="health">
+                                <label for="health-read"><i class="fas fa-heartbeat"></i> Health</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="travel-read" name="reading-interests" value="travel">
+                                <label for="travel-read"><i class="fas fa-plane"></i> Travel</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="food-read" name="reading-interests" value="food">
+                                <label for="food-read"><i class="fas fa-utensils"></i> Food</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="business-read" name="reading-interests" value="business">
+                                <label for="business-read"><i class="fas fa-chart-line"></i> Business</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="art-read" name="reading-interests" value="art">
+                                <label for="art-read"><i class="fas fa-palette"></i> Art</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="science-read" name="reading-interests" value="science">
+                                <label for="science-read"><i class="fas fa-flask"></i> Science</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="fiction-read" name="reading-interests" value="fiction">
+                                <label for="fiction-read"><i class="fas fa-book"></i> Fiction</label>
+                            </div>
+                            <div class="interest-chip">
+                                <input type="checkbox" id="poetry-read" name="reading-interests" value="poetry">
+                                <label for="poetry-read"><i class="fas fa-feather"></i> Poetry</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group viewer-field" style="display: none;">
+                        <label for="notification-preference">Notification Preferences</label>
+                        <div class="input-wrapper select-wrapper">
+                            <i class="fa-solid fa-bell input-icon"></i>
+                            <select id="notification-preference" name="notification-preference">
+                                <option value="daily">Daily digest</option>
+                                <option value="weekly">Weekly digest</option>
+                                <option value="important">Important updates only</option>
+                                <option value="none">No notifications</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="agreement-checkbox">
+                            <input type="checkbox" id="terms-agreement" name="terms-agreement" required>
+                            <label for="terms-agreement">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="register-submit-btn">
+                        <span>Create Account</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                
+                <div class="social-signup">
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                            <span>Continue with Google</span>
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Continue with Facebook</span>
+                        </button>
+                        <button type="button" class="social-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Continue with Twitter</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="login-link">
+                    Already have an account? <a href="login1.html">Sign in</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/registration.js"></script>
+</body>
+</html>

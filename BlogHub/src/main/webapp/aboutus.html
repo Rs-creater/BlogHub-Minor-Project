@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BlogHub</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>BlogHub</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.jsp">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="profile-container">
+                <div class="profile-icon" id="profileIcon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="dropdown-menu" id="profileDropdown">
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="setting.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="login1.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Meet Our Team</h1>
+                <p>The creative minds behind My Blog</p>
+            </div>
+        </section>
+
+        <section class="about-intro">
+            <div class="container">
+                <h2>Who We Are</h2>
+                <p>We are a passionate team of developers dedicated to creating insightful and engaging content about technology, programming, and digital innovation. Our mission is to share knowledge, inspire creativity, and build a community of tech enthusiasts.</p>
+                <p>Our diverse team brings together expertise in frontend and backend development, allowing us to provide comprehensive perspectives on all aspects of modern web development.</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2>Our Development Team</h2>
+                <div class="team-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                </div>
+                
+                <div class="team-grid">
+                    <!-- Frontend Developer 1 -->
+                    <div class="team-member frontend" data-role="frontend">
+                        <div class="member-image">
+                            <img src="/api/placeholder/300/300" alt="Shivam">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Shivam </h3>
+                            <p class="role">Frontend Developer</p>
+                            <p class="bio">Specializes in creating responsive, user-friendly interfaces with React and modern CSS frameworks. Passionate about accessibility and user experience.</p>
+                            <div class="skills">
+                                <!-- <span>React</span> -->
+                                <span>JavaScript</span>
+                                <span>CSS</span>
+                                <span>UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Frontend Developer 2 -->
+                    <div class="team-member frontend" data-role="frontend">
+                        <div class="member-image">
+                            <img src="/api/placeholder/300/300" alt="Rohit Sinha">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-dribbble"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Rohit Sinha</h3>
+                            <p class="role">Frontend Developer</p>
+                            <p class="bio">Creative frontend developer with a background in design. Expert in building beautiful, performant interfaces and animations with modern web technologies.</p>
+                            <div class="skills">
+                                <!-- <span>Vue.js</span> -->
+                                <span>CSS</span>
+                                <span>TypeScript</span>
+                                <span>Animation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Developer 1 -->
+                    <div class="team-member backend" data-role="backend">
+                        <div class="member-image">
+                            <img src="/api/placeholder/300/300" alt="Aman Dhakad">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-stack-overflow"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Aman Dhakad</h3>
+                            <p class="role">Backend Developer</p>
+                            <p class="bio">Experienced backend developer with expertise in building scalable APIs and microservices. Focused on performance optimization and system architecture.</p>
+                            <div class="skills">
+                                <span>Node.js</span>
+                                <!-- <span>Python</span> -->
+                                <span>MySQL</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Developer 2 -->
+                    <div class="team-member backend" data-role="backend">
+                        <div class="member-image">
+                            <img src="/api/placeholder/300/300" alt="Vijay Patidar">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Vijay Patidar</h3>
+                            <p class="role">Backend Developer</p>
+                            <p class="bio">Security-focused backend developer with a passion for clean code and efficient database design. Experienced in building robust and secure server applications.</p>
+                            <div class="skills">
+                                <span>Java</span>
+                                <!-- <span>Spring Boot</span>
+                                <span>PostgreSQL</span>
+                                <span>Security</span> -->
+                                <span>MySQL</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="journey-section">
+            <div class="container">
+                <h2>Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2022</h3>
+                            <p>Founded by a small team of passionate developers with a vision to create a platform for sharing knowledge and experiences.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2023</h3>
+                            <p>Expanded our team and content focus areas, introducing specialized categories and improving our technical infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2024</h3>
+                            <p>Reached 100,000 monthly readers and launched our community discussion forum to foster collaboration among developers.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2025</h3>
+                            <p>Continuing to grow and innovate, with plans to launch video tutorials and interactive coding challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>We embrace new technologies and methodologies, constantly seeking better solutions.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community</h3>
+                        <p>We believe in the power of collaboration and knowledge sharing among developers.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Education</h3>
+                        <p>We are committed to providing accessible learning resources for developers at all levels.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Quality</h3>
+                        <p>We strive for excellence in our content, code, and community interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Join Our Journey</h2>
+                <p>Interested in contributing to our blog or working with our team?</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn primary">Contact Us</a>
+                    <a href="#" class="btn secondary">Write For Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>My Blog is a platform dedicated to sharing knowledge and insights on various topics in web development.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <p>Stay updated with our latest articles</p>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>

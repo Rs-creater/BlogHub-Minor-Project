@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Profile Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style/profile.css">
+</head>
+<body>
+  <!-- Profile Card Section -->
+  <div class="profile-card">
+    <div class="profile-info">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      <div class="profile-text">
+        <h2>Manoj Patidar</h2>
+        <p>Digital Creator</p>
+        <p>Sharing thoughts and experiences through content.</p>
+        <div class="contact-info">
+          <div class="contact-card"><i class="fas fa-envelope"></i> manoj123@gmail.com</div>
+          <div class="contact-card"><i class="fas fa-map-marker-alt"></i>India</div>
+          <div class="contact-card"><i class="fas fa-phone"></i> 6267212341</div>
+          <div class="contact-card"><i class="fas fa-globe"></i> https://replit.com/@manoj123</div>
+        </div>
+      </div>
+    </div>
+    <button class="update-btn" id="openUpdateBtn">Update Details</button>
+  </div>
+
+  <!-- Stats Box Section -->
+  <div class="stats-box">
+    <div><h3>12</h3><p>Posts</p></div>
+    <div><h3>1200</h3><p>Followers</p></div>
+    <div><h3>500</h3><p>Following</p></div>
+  </div>
+
+  <!-- Post Section -->
+  <div class="post-section">
+    <h2>Blog Post Management <button class="update-btn" id="createPostBtn">+ Create New Post</button></h2>
+    <div class="post-grid">
+      <div class="post-card" data-id="post-1">
+        <img src="https://via.placeholder.com/400x200" alt="Blog Post Image">
+        <span class="tag">Technology</span>
+        <h3>Getting Started with Web Development</h3>
+        <p>Learn the basics of web development and start your journey as a developer...</p>
+        <div class="actions">
+          <button class="btn edit"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn delete"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+        <div class="stats">
+          <span><i class="fas fa-eye"></i> 1.2K Views</span>
+          <span><i class="fas fa-heart"></i> 245 Likes</span>
+          <span><i class="fas fa-comment"></i> 56 Comments</span>
+        </div>
+      </div>
+
+      <div class="post-card" data-id="post-2">
+        <img src="https://via.placeholder.com/400x200" alt="Blog Post Image">
+        <span class="tag">Design</span>
+        <h3>UI/UX Principles</h3>
+        <p>Explore fundamental principles of modern and user-friendly UI/UX design...</p>
+        <div class="actions">
+          <button class="btn edit"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn delete"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+        <div class="stats">
+          <span><i class="fas fa-eye"></i> 890 Views</span>
+          <span><i class="fas fa-heart"></i> 174 Likes</span>
+          <span><i class="fas fa-comment"></i> 32 Comments</span>
+        </div>
+      </div>
+
+      <div class="post-card" data-id="post-3">
+        <img src="https://via.placeholder.com/400x200" alt="Blog Post Image">
+        <span class="tag">Coding</span>
+        <h3>Top 10 JavaScript Tips</h3>
+        <p>Boost your JavaScript productivity with these essential tips and tricks...</p>
+        <div class="actions">
+          <button class="btn edit"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn delete"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+        <div class="stats">
+          <span><i class="fas fa-eye"></i> 2.3K Views</span>
+          <span><i class="fas fa-heart"></i> 412 Likes</span>
+          <span><i class="fas fa-comment"></i> 87 Comments</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Update Profile Modal -->
+  <div class="modal" id="updateModal">
+    <div class="modal-content">
+      <h3>Update Profile Details</h3>
+      <input type="text" placeholder="Full Name">
+      <input type="text" placeholder="Role">
+      <input type="email" placeholder="Email">
+      <input type="tel" placeholder="Phone Number">
+      <input type="text" placeholder="Location">
+      <input type="url" placeholder="Website URL">
+      <div class="modal-buttons">
+        <button class="cancel-btn" id="closeModal">Cancel</button>
+        <button class="save-btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Post Modal -->
+  <div class="modal" id="createPostModal">
+    <div class="modal-content">
+      <h3>Create New Post</h3>
+      <input type="text" placeholder="Post Title">
+      <select>
+        <option value="">Select Category</option>
+        <option value="Technology">Technology</option>
+        <option value="Design">Design</option>
+        <option value="Coding">Coding</option>
+        <option value="Business">Business</option>
+        <option value="Lifestyle">Lifestyle</option>
+      </select>
+      <textarea placeholder="Post content..." rows="5"></textarea>
+      <div class="file-input">
+        <label for="post-image">Upload Image</label>
+        <input type="file" id="post-image" accept="image/*">
+      </div>
+      <div class="modal-buttons">
+        <button class="cancel-btn" id="closeCreateModal">Cancel</button>
+        <button class="save-btn" id="saveNewPost">Publish</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Post Modal -->
+  <div class="modal" id="editPostModal">
+    <div class="modal-content">
+      <h3>Edit Post</h3>
+      <input type="text" id="edit-post-title" placeholder="Post Title">
+      <select id="edit-post-category">
+        <option value="">Select Category</option>
+        <option value="Technology">Technology</option>
+        <option value="Design">Design</option>
+        <option value="Coding">Coding</option>
+        <option value="Business">Business</option>
+        <option value="Lifestyle">Lifestyle</option>
+      </select>
+      <textarea id="edit-post-content" placeholder="Post content..." rows="5"></textarea>
+      <input type="hidden" id="edit-post-id">
+      <div class="modal-buttons">
+        <button class="cancel-btn" id="closeEditModal">Cancel</button>
+        <button class="save-btn" id="saveEditPost">Update Post</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>
